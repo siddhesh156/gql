@@ -13,7 +13,7 @@ app.use(cors());
 mongoose.connect('mongodb+srv://shaun:shaun1234@gpl-sid-2ew5y.mongodb.net/test?retryWrites=true&w=majority');
 mongoose.connection.once('open', () => {
     console.log('connected to database');
-})
+});
 
 app.use('/graphql', graphqlHTTP({
 schema,
